@@ -1,0 +1,115 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #6B7280;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple: #8B5Cf6;
+}
+body {
+    background-color: var(--dark)
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'fira sans', sans-serif;
+}
+.divboss{
+    margin-left: 5%;
+}
+.p {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    color: var(--gray);
+}
+.add-task input{
+    flex: 1 1 0%;
+    width: 70%;
+    height: 35px;
+    border: none;
+    outline:none;
+    background-color: var(--darker);
+    color: var(--light);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+.add-task input::placeholder {
+    color: var(--gray)
+}
+.add-task button {
+    color: var(--pink);
+    font-size: 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    background-image: 
+    linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.4s;
+}
+.add-task button:hover { opacity: 0.8;}
+.add-task button:active { opacity: 0.6;}
+.p2 {
+    padding: 40px 0;
+    font-size: 30px;
+    color: var(--gray);
+}
+
+.todo-div {
+    background-color: var(--darkest);
+    width: 80%;
+    height: 35px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+.todo-input {
+    height: 35px;
+    border: none;
+    background: none;
+    color: var(--light);
+    border-radius: 12px;
+    box-sizing: border-box;
+    width: 80%;
+    user-select: none;
+    border: none;
+    cursor: default;
+
+}
+.edit-btn , .delete-btn {
+    width: 50px;
+    height: 35px;
+    background: none;
+    border: none;
+    cursor: pointer!important;
+    margin-left: 15px;
+}
+.edit-btn {
+    background-image: 
+    linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tasks {
+    margin-top: -50px;
+}
+.todo-input {
+    border: none;
+    outline:none;
+}
+.delete-btn {color: crimson;}
+@media(max-width: 958px) {
+    .todo-input {  width: 75%;}
+}
+@media(max-width: 722px){
+    .todo-input {  width: 65%;}
+}
+@media(max-width: 520px) {
+    .todo-input {width: 55%;}
+    .edit-btn , .delete-btn {font-size: 11px; width: 35px;  }
+    .todo-input{font-size: 11px;}
+    .add-task button {font-size: 16px;}
+}
